@@ -49,7 +49,7 @@
 - **Actie:** Bundelen met coating kit
 
 ### 4. Wheel Cleaner Pro
-n- **Categorie:** Velgen
+- **Categorie:** Velgen
 - **Inkoopprijs (geschat):** €4–€7
 - **Verkoopprijs:** €14,95–€19,95
 - **Marge:** ~65%
@@ -135,10 +135,58 @@ n- **Categorie:** Velgen
 
 ---
 
+## Leverancier Bevindingen (7 aug 2026)
+
+### BigBuy (https://www.bigbuy.eu)
+- **Toegang:** Catalogus zichtbaar zonder account; wholesale prijzen pas na gratis registratie.
+- **Assortiment:** Grote "Car and motorbike care" categorie (290 producten) met subcategorieën: Paintwork care, Rim care, Tyre care, Interior care, Cleaning Kits, Sponges/cloths/brushes, etc.
+- **Gezien merken:** Sonax, Turtle Wax, Krafft, Rainx, Michelin, Holts, Milagritos, Motul, Autosol, Meguiar's, Goodyear.
+- **Marges:** Approximate margin getoond, veel producten tussen 50–75%.
+- **Interessante concrete producten:**
+  - Turtle Wax TW53710 Graphene 414 ml — 62% margin (Wet waxes / paintwork care)
+  - Sonax Clay-Ball sponge — 56% margin (paintwork care)
+  - Sonax XTREME Wheel Cleaner 500 ml — 56% margin
+  - Sonax Tyre Polisher 623880 — 74% margin
+  - Michelin Headlight Restorer 009475 200 ml — 62% margin + Free Shipping
+  - Big Wipes Cleaning Kit 1 L — 79% margin
+  - Sonax Dashboard Cleaner 02703000 — 62% margin
+  - Car Wash Shampoo Sonax SX03121410 — 56% margin
+- **EU-voorraad:** Ja; "Stock in Europe", "Fast deliveries".
+- **Verzendkosten:** Sommige producten "Free Shipping" (waarschijnlijk binnen bepaalde drempel); exacte tarieven pas na account.
+- **Beperking:** Geen prijzen zichtbaar zonder BigBuy account; kan geen exacte inkoopprijzen bepalen.
+
+### Syncee (https://www.syncee.com)
+- **Toegang:** Marketplace zichtbaar zonder account; wholesale prijzen pas na registratie / abonnement.
+- **Assortiment:** "Automobiles & Motorcycles" categorie bestaat, maar voornamelijk auto parts, tools, motorclothing. Car care is een klein deel.
+- **Gezien merken:** Turtle Wax, Meguiar's, Sonax, K2, Motip, Commandant.
+- **Interessante concrete producten:**
+  - Meguiar's Keep Clear Headlight Coating (G17804) — koplamp UV-bescherming
+  - Turtle Wax Hybrid Solutions Pure Compound 500 ml — verwijdert oxidatie/swirls
+  - Turtle Wax GL Scratch Remover 100 ml — lichte krassen
+  - Sonax Metallic High Gloss 317.100
+  - K2 Luster Series Super Fast Polishing Paste Q3 100g
+  - Commandant Rubbing Compound 3 500g — grof polijstmiddel
+- **EU-voorraad:** Platform richt zich op EU/US/UK/CA/AU leveranciers; exacte locatie per leverancier pas na account.
+- **Beperking:** Weinig dedicated car care suppliers in de open catalogus; prijzen verborgen.
+
+### Spocket
+- **Status:** Nog niet onderzocht — vereist account (Master doet morgen).
+
+---
+
+## Tussenconclusie
+
+- **BigBuy** is de meest veelbelovende EU-dropship leverancier voor CeramicLab: groot car care assortiment, bekende merken, hoge marges en EU-voorraad.
+- **Syncee** heeft enkele interessante Turtle Wax / Meguiar's / Sonax producten, maar het aanbod is veel smaller voor puur car detailing.
+- **Aanbeveling:** Account aanmaken bij BigBuy om exacte prijzen en verzendtarieven te zien. Spocket morgen checken door Master.
+
+---
+
 ## Volgende Actie
 
-1. Spocket/BigBuy/Syncee accounts aanmaken
-2. Bovenstaande producten opzoeken en exacte prijzen vergelijken
-3. Beste 5 producten selecteren op basis van prijs, review score en levertijd
-4. Samples bestellen voor kwaliteitscheck en foto's
-5. Productdata + AI/custom foto's vervangen in `lib/products.ts`
+1. ✅ BigBuy catalogus verkend — account aanmaken voor exacte prijzen
+2. ✅ Syncee doorzocht — beperkt car care aanbod, account nodig voor prijzen
+3. ⏳ Spocket account aanmaken (Master doet morgen)
+4. Exacte prijzen vergelijken en beste 5 producten definitief selecteren
+5. Samples bestellen voor kwaliteitscheck en foto's
+6. Productdata + AI/custom foto's vervangen in `lib/products.ts`

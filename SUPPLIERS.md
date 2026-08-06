@@ -68,9 +68,30 @@ Deze merken verkopen meestal niet direct dropship, maar zijn interessant voor gr
 
 ---
 
+## Update 7 aug 2026 — Eerste catalogusverkenning
+
+### BigBuy
+- ✅ Catalogus zichtbaar zonder account (wholesale prijzen pas na gratis registratie).
+- ✅ Grote "Car and motorbike care" afdeling: 290 producten, 119 in Paintwork care.
+- ✅ Bekende merken: Sonax, Turtle Wax, Krafft, Rainx, Michelin, Holts, Motul, Autosol, Meguiar's.
+- ✅ Indicatieve marges 50–75% (bv. Sonax Tyre Polisher 74%, Big Wipes Cleaning Kit 79%).
+- ✅ EU-voorraad / fast delivery vermeld op productpagina's.
+- ⚠️ Exacte inkoopprijzen pas na BigBuy account.
+
+### Syncee
+- ✅ Marketplace zichtbaar zonder account; prijzen pas na registratie/abonnement.
+- ⚠️ Automotive categorie is voornamelijk auto parts/tools/motorcycle; car care aanbod klein.
+- ✅ Enkele interessante items: Meguiar's Keep Clear Headlight Coating, Turtle Wax Hybrid Solutions Pure Compound, Sonax Metallic High Gloss.
+- ⚠️ Minder geschikt voor puur car detailing dan BigBuy.
+
+### Spocket
+- ⏳ Nog niet onderzocht; Master maakt morgen een account.
+
+---
+
 ## Volgende Actie
 
-- [ ] Spocket account aanmaken en producten verzamelen
-- [ ] BigBuy account aanvragen / catalogus bekijken
-- [ ] Syncee doorzoeken op EU car care suppliers
+- [ ] Spocket account aanmaken en producten verzamelen (Master doet morgen)
+- [x] BigBuy catalogus bekeken — account aanmaken voor exacte prijzen
+- [x] Syncee doorzocht op EU car care suppliers
 - [ ] 5–10 sample producten bestellen voor foto's en kwaliteitscheck

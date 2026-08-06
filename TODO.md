@@ -42,9 +42,9 @@
 
 ### Leveranciers & Producten
 - [x] Eerste product shortlist gemaakt in `PRODUCT_SHORTLIST.md`
-- [ ] **Spocket account aanmaken** en producten verzamelen
-- [ ] **BigBuy account/catalogus** bekijken
-- [ ] **Syncee** doorzoeken op EU car care suppliers
+- [x] **BigBuy catalogus** verkend (concrete producten + marges gevonden; account nodig voor exacte prijzen)
+- [x] **Syncee** doorzocht op EU car care suppliers (smal aanbod; account nodig voor prijzen)
+- [ ] **Spocket account aanmaken** en producten verzamelen (Master doet morgen)
 - [ ] Exacte inkoopprijzen vergelijken en 5 producten definitief selecteren
 - [ ] 5–10 sample producten bestellen voor kwaliteitscheck + foto's
 - [ ] Echte productfoto's, beschrijvingen en prijzen toevoegen
