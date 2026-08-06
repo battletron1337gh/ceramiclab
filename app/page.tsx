@@ -1,26 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const products = [
-  {
-    name: "Ceramic Coating Kit",
-    description: "Professionele 9H coating voor 2+ jaar bescherming.",
-    price: "€89,95",
-    image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=600&h=400&fit=crop",
-  },
-  {
-    name: "Microfiber Deluxe Set",
-    description: "12 ultra-zachte doeken voor veilig polijsten.",
-    price: "€34,95",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
-  },
-  {
-    name: "Interior Detailer",
-    description: "Reinigt en beschermt dashboard, leer en kunststof.",
-    price: "€24,95",
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=400&fit=crop",
-  },
-];
+import { products } from "@/lib/products";
 
 const diyVideos = [
   {
@@ -39,6 +19,8 @@ const diyVideos = [
     thumbnail: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=250&fit=crop",
   },
 ];
+
+const featuredProducts = products.slice(0, 3);
 
 export default function Home() {
   return (
@@ -69,13 +51,13 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="#producten"
+              href="/shop"
               className="inline-flex items-center justify-center px-8 py-4 bg-gold text-neutral-950 font-bold rounded-full hover:bg-gold-light transition-colors"
             >
               Bekijk producten
             </Link>
             <Link
-              href="#diy"
+              href="/#diy"
               className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
             >
               Bekijk DIY video's
@@ -103,20 +85,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products */}
+      {/* Featured Products */}
       <section id="producten" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Bouw je eigen detailing kit</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Populaire producten</h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
               Kies losse producten of ga voor een complete kit met alles wat je nodig hebt voor een professionele finish.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <div
-                key={product.name}
+            {featuredProducts.map((product) => (
+              <Link
+                key={product.id}
+                href={`/shop/${product.slug}`}
                 className="group rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 hover:border-gold/50 transition-colors"
               >
                 <div className="relative aspect-[3/2] overflow-hidden">
@@ -126,19 +109,33 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  {product.badge && (
+                    <div className="absolute top-4 left-4 px-3 py-1 bg-gold text-neutral-950 text-xs font-bold rounded-full">
+                      {product.badge}
+                    </div>
+                  )}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-                  <p className="text-neutral-400 text-sm mb-4">{product.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gold font-bold text-xl">{product.price}</span>
-                    <button className="px-4 py-2 bg-white/10 hover:bg-gold hover:text-neutral-950 rounded-full text-sm font-semibold transition-colors">
-                      In winkelwagen
-                    </button>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-gold transition-colors">{product.name}</h3>
+                  <p className="text-neutral-400 text-sm mb-4 line-clamp-2">{product.description}</p>
+                  <div className="flex items-center gap-3">
+                    <span className="text-gold font-bold text-xl">€{product.price.toFixed(2)}</span>
+                    {product.comparePrice && (
+                      <span className="text-neutral-500 line-through text-sm">€{product.comparePrice.toFixed(2)}</span>
+                    )}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/shop"
+              className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
+            >
+              Bekijk alle producten →
+            </Link>
           </div>
         </div>
       </section>
@@ -231,7 +228,7 @@ export default function Home() {
             Start vandaag met onze Ceramic Coating Kit en bescherm je lak tegen weersinvloeden, vuil en UV-straling.
           </p>
           <Link
-            href="#producten"
+            href="/shop"
             className="inline-flex items-center justify-center px-8 py-4 bg-gold text-neutral-950 font-bold rounded-full hover:bg-gold-light transition-colors"
           >
             Bestel nu — gratis verzending vanaf €75
@@ -241,15 +238,42 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 py-12 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-2xl font-bold gold-gradient">CeramicLab</div>
-          <div className="text-neutral-500 text-sm">
-            © 2026 CeramicLab. Premium car care voor detailing liefhebbers.
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <div className="text-2xl font-bold gold-gradient mb-4">CeramicLab</div>
+              <p className="text-neutral-500 text-sm">
+                Premium car care producten voor detailing liefhebbers.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Shop</h4>
+              <ul className="space-y-2 text-sm text-neutral-400">
+                <li><Link href="/shop" className="hover:text-gold">Alle producten</Link></li>
+                <li><Link href="/shop/complete-detailing-kit" className="hover:text-gold">Complete kit</Link></li>
+                <li><Link href="/shop/ceramic-coating-kit" className="hover:text-gold">Ceramic coating</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Service</h4>
+              <ul className="space-y-2 text-sm text-neutral-400">
+                <li><Link href="/contact" className="hover:text-gold">Contact</Link></li>
+                <li><Link href="/verzending" className="hover:text-gold">Verzending</Link></li>
+                <li><Link href="/retour" className="hover:text-gold">Retourneren</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Juridisch</h4>
+              <ul className="space-y-2 text-sm text-neutral-400">
+                <li><Link href="/privacy" className="hover:text-gold">Privacybeleid</Link></li>
+                <li><Link href="#" className="hover:text-gold">Algemene voorwaarden</Link></li>
+              </ul>
+            </div>
           </div>
-          <div className="flex gap-6 text-sm text-neutral-400">
-            <Link href="#" className="hover:text-gold transition-colors">Contact</Link>
-            <Link href="#" className="hover:text-gold transition-colors">Verzending</Link>
-            <Link href="#" className="hover:text-gold transition-colors">Privacy</Link>
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-neutral-500 text-sm">
+              © 2026 CeramicLab. Alle rechten voorbehouden.
+            </div>
           </div>
         </div>
       </footer>
