@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function ComingSoonPage() {
   const [password, setPassword] = useState("");
@@ -27,10 +28,15 @@ export default function ComingSoonPage() {
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6">
       <div className="max-w-md w-full text-center space-y-8">
-        <div className="space-y-2">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-            CeramicLab
-          </h1>
+        <div className="space-y-4">
+          <Image
+            src="/logo-full.png"
+            alt="CeramicLab"
+            width={320}
+            height={160}
+            className="mx-auto h-auto w-full max-w-[260px]"
+            priority
+          />
           <p className="text-xl text-neutral-400">Something premium is coming.</p>
         </div>
 

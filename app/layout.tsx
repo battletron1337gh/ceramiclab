@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   title: "CeramicLab — Premium Car Care & Ceramic Coating",
   description: "Professionele car care producten voor detailing liefhebbers. Ceramic coating, reinigers, microfiber en complete DIY kits.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
+    apple: "/logo.png",
   },
 };
 

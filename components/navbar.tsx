@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useCart } from "./cart-context";
 
@@ -11,8 +12,15 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold gold-gradient">
-          CeramicLab
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="CeramicLab"
+            width={140}
+            height={36}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-300">
